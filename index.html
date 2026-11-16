@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ESCROTOS.COM – Downloads</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script>
+
+try{var t=localStorage.getItem("escrotos-tema");if(t)document.documentElement.dataset.theme=t}catch(e){}
+try{var f=localStorage.getItem("escrotos-fx");
+  if(f===null&&window.matchMedia("(prefers-reduced-motion:reduce)").matches)f="off";
+  document.documentElement.dataset.fx=(f==="off")?"off":"on"}catch(e){document.documentElement.dataset.fx="on"}
+</script>
+<style>
+:root{
+  --ink:#14112b; --panel:#1d1940; --panel2:#262151; --line:#37316b;
+  --text:#efecff; --muted:#a29fcf; --violet:#8b5cf6; --pink:#ff5d8f; --ok:#4ade80;
+  --onacc:#fff; --glow1:rgba(139,92,246,.28); --glow2:rgba(255,93,143,.16);
+  --shadow:rgba(255,93,143,.7); --on:rgba(139,92,246,.18); --mockbg:#100e24; --drop:#000;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+
+:root[data-theme="sangue"]{--ink:#1a0b0e;--panel:#2a1216;--panel2:#38181d;--line:#5a2830;--text:#ffecee;--muted:#cf9fa5;--violet:#dc2626;--pink:#ff5d5d;--glow1:rgba(220,38,38,.28);--glow2:rgba(255,93,93,.14);--shadow:rgba(255,60,60,.7);--on:rgba(220,38,38,.2);--mockbg:#14080a}
+:root[data-theme="brasa"]{--ink:#1a1008;--panel:#2b1a0d;--panel2:#3a2411;--line:#5e3d1c;--text:#fff1e3;--muted:#d0ab86;--violet:#f97316;--pink:#fbbf24;--onacc:#1f1100;--glow1:rgba(249,115,22,.26);--glow2:rgba(251,191,36,.14);--shadow:rgba(249,115,22,.65);--on:rgba(249,115,22,.2);--mockbg:#140b05}
+:root[data-theme="neon"]{--ink:#0a0a1a;--panel:#12122e;--panel2:#1a1a40;--line:#2e2e7a;--text:#eaffff;--muted:#8fb8d8;--violet:#00e5ff;--pink:#ff2bd6;--onacc:#04121a;--glow1:rgba(0,229,255,.22);--glow2:rgba(255,43,214,.2);--shadow:rgba(255,43,214,.6);--on:rgba(0,229,255,.16);--mockbg:#070714}
+:root[data-theme="hacker"]{--ink:#050a05;--panel:#0b140b;--panel2:#101e10;--line:#1f3d1f;--text:#d8ffd8;--muted:#7fb27f;--violet:#22c55e;--pink:#84cc16;--onacc:#021402;--glow1:rgba(34,197,94,.2);--glow2:rgba(132,204,22,.12);--shadow:rgba(34,197,94,.55);--on:rgba(34,197,94,.16);--mockbg:#030703}
+:root[data-theme="gelo"]{--ink:#0b1622;--panel:#112233;--panel2:#172c42;--line:#26435f;--text:#eaf6ff;--muted:#94b6d0;--violet:#38bdf8;--pink:#a5f3fc;--onacc:#04202e;--glow1:rgba(56,189,248,.24);--glow2:rgba(165,243,252,.12);--shadow:rgba(56,189,248,.6);--on:rgba(56,189,248,.16);--mockbg:#08111b}
+:root[data-theme="ouro"]{--ink:#14110a;--panel:#211b0e;--panel2:#2d2514;--line:#4d3f1f;--text:#fff7e0;--muted:#c9b77f;--violet:#eab308;--pink:#f59e0b;--onacc:#1a1200;--glow1:rgba(234,179,8,.22);--glow2:rgba(245,158,11,.13);--shadow:rgba(234,179,8,.55);--on:rgba(234,179,8,.16);--mockbg:#0e0c06}
+:root[data-theme="pretogelo"]{--ink:#000;--panel:#0d0d0d;--panel2:#171717;--line:#2e2e2e;--text:#f2f7fa;--muted:#9aa4a9;--violet:#e8f1f5;--pink:#ffffff;--onacc:#0a0a0a;--glow1:rgba(232,241,245,.10);--glow2:rgba(255,255,255,.05);--shadow:rgba(232,241,245,.35);--on:rgba(232,241,245,.1);--mockbg:#000}
+:root[data-theme="claro"]{--ink:#f4f2ff;--panel:#ffffff;--panel2:#ece8ff;--line:#d4cdf5;--text:#1c1838;--muted:#6a65a0;--violet:#7c3aed;--pink:#e11d6a;--ok:#16a34a;--glow1:rgba(124,58,237,.14);--glow2:rgba(225,29,106,.08);--shadow:rgba(225,29,106,.4);--on:rgba(124,58,237,.1);--mockbg:#faf9ff;--drop:rgba(60,40,120,.35);color-scheme:light}
+
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--text);font:400 16px/1.55 var(--body);min-height:100vh;
+  background-image:radial-gradient(900px 500px at 85% -10%,var(--glow1),transparent 60%),radial-gradient(700px 400px at -10% 110%,var(--glow2),transparent 60%);
+  background-attachment:fixed;transition:background-color .25s,color .25s}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--pink);outline-offset:3px;border-radius:8px}
+.shell{display:grid;grid-template-columns:290px 1fr;gap:28px;max-width:1180px;margin:0 auto;padding:28px 22px 30px}
+
+.side{position:sticky;top:28px;align-self:start;display:flex;flex-direction:column;gap:18px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--violet),var(--pink));color:var(--onacc);display:grid;place-items:center;font:800 20px var(--display)}
+.brand b{font:800 20px/1 var(--display);letter-spacing:-.01em;display:block}
+.brand span{font-size:13px;color:var(--muted)}
+.nav{display:flex;flex-direction:column;gap:8px}
+.nav-label{font-size:13px;color:var(--muted);margin:6px 4px 0}
+.nav button{all:unset;cursor:pointer;display:flex;align-items:center;gap:12px;padding:12px;border-radius:14px;border:1px solid transparent;transition:background .15s,border-color .15s}
+.nav button:hover{background:var(--panel)}
+.nav button:focus-visible{outline:2px solid var(--pink)}
+.nav button[aria-selected="true"]{background:var(--panel2);border-color:var(--line)}
+.navrow{display:flex;align-items:center;gap:6px}
+.navrow button{flex:1;min-width:0}
+.navdl{flex:none;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;text-decoration:none;color:var(--onacc);background:linear-gradient(135deg,var(--violet),var(--pink));transition:transform .15s}
+.navdl:hover{transform:translateY(-2px)}
+.navdl svg{width:20px;height:20px}
+.navdl[aria-disabled="true"]{opacity:.4;pointer-events:none}
+.ico{flex:none;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font:800 16px var(--display);background:var(--panel2);border:1px solid var(--line)}
+.nav button[aria-selected="true"] .ico{background:linear-gradient(135deg,var(--violet),var(--pink));color:var(--onacc);border-color:transparent}
+.nav small{display:block;color:var(--muted);font-size:13px;line-height:1.3}
+.nav strong{font-weight:700}
+.note{font-size:13px;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px}
+.note b{color:var(--text)}
+
+.themes{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px}
+.themes-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.themes-top span{font-size:13px;color:var(--muted)}
+.themes-top b{font-size:13px;font-weight:700}
+.swatches{display:flex;flex-wrap:wrap;gap:10px}
+.sw{all:unset;cursor:pointer;width:32px;height:32px;border-radius:50%;border:2px solid var(--line);transition:transform .15s,border-color .15s;position:relative}
+.sw:hover{transform:scale(1.12)}
+.sw:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
+.sw[aria-pressed="true"]{border-color:var(--text);box-shadow:0 0 0 3px var(--panel2)}
+
+.main{display:flex;flex-direction:column;gap:22px;min-width:0}
+.hero{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:26px;padding:34px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--ok);background:color-mix(in srgb,var(--ok) 10%,transparent);border:1px solid color-mix(in srgb,var(--ok) 30%,transparent);padding:4px 12px;border-radius:99px}
+.tag i{width:7px;height:7px;border-radius:50%;background:var(--ok)}
+h1{font:800 clamp(34px,5vw,56px)/1 var(--display);letter-spacing:-.03em;margin:16px 0 14px}
+.lead{color:var(--muted);max-width:46ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;padding:14px 24px;border-radius:14px;background:linear-gradient(135deg,var(--violet),var(--pink));color:var(--onacc);box-shadow:0 10px 30px -10px var(--shadow);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 34px -10px var(--shadow)}
+.btn.ghost{background:transparent;border:1px solid var(--line);box-shadow:none;color:var(--text)}
+.btn.ghost:hover{background:var(--panel2)}
+.btn[aria-disabled="true"]{opacity:.55;pointer-events:none}
+
+.mock{background:var(--mockbg);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 30px 60px -30px var(--drop)}
+.bar{display:flex;gap:6px;padding:10px 12px;background:var(--panel)}
+.bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.mrow{display:flex;justify-content:space-between;padding:11px 16px;border-top:1px solid var(--line);font-size:14px}
+.mrow span:last-child{color:var(--muted)}
+.mrow.on{background:var(--on)}
+.mbtn{margin:14px 16px 16px;text-align:center;padding:10px;border-radius:10px;background:linear-gradient(135deg,var(--violet),var(--pink));color:var(--onacc);font-weight:700;font-size:14px}
+.mock.empty{min-height:210px;display:grid;place-items:center;color:var(--muted);text-align:center;padding:20px;font-size:14px}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px 18px}
+.stat span{font-size:13px;color:var(--muted)}
+.stat b{display:block;font:800 22px/1.2 var(--display);margin-top:2px}
+.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:24px}
+.card h2{font:800 20px var(--display);margin-bottom:14px}
+.feat{list-style:none;padding:0;display:grid;gap:12px}
+.feat li{display:flex;gap:12px;color:var(--muted)}
+.feat li:before{content:"";flex:none;width:8px;height:8px;margin-top:9px;border-radius:50%;background:linear-gradient(135deg,var(--violet),var(--pink))}
+.feat b{color:var(--text);font-weight:700}
+ol.steps{padding-left:20px;display:grid;gap:10px;color:var(--muted)}
+ol.steps b{color:var(--text)}
+dl.specs{display:grid;gap:10px;margin-top:6px}
+dl.specs div{display:grid;gap:2px;padding-top:10px;border-top:1px solid var(--line)}
+dl.specs dt{font-weight:700;font-size:14px;color:var(--text)}
+dl.specs dd{margin:0;font-size:14px;color:var(--muted)}
+.foot{color:var(--muted);font-size:13px;text-align:center;padding:10px 22px 40px;border-top:1px solid var(--line);max-width:1180px;margin:0 auto}
+.foot b{color:var(--text)}
+
+.fxbtn{all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.fxbtn:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
+.fxbtn i{width:38px;height:22px;border-radius:99px;background:var(--line);position:relative;transition:background .2s}
+.fxbtn i:after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:var(--text);transition:transform .2s,background .2s}
+.fxbtn[aria-checked="true"] i{background:linear-gradient(135deg,var(--violet),var(--pink))}
+.fxbtn[aria-checked="true"] i:after{transform:translateX(16px);background:var(--onacc)}
+
+#fx{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.glow{position:fixed;left:0;top:0;width:440px;height:440px;margin:-220px 0 0 -220px;border-radius:50%;background:radial-gradient(circle,var(--glow1),transparent 65%);pointer-events:none;z-index:0;will-change:transform;opacity:0;transition:opacity .4s}
+.glow.on{opacity:1}
+.shell,.foot{position:relative;z-index:1}
+html[data-fx="off"] #fx,html[data-fx="off"] .glow{display:none}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes flow{to{background-position:200% 50%}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 transparent}50%{box-shadow:0 0 24px 3px var(--shadow)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes sweep{to{transform:translateX(260%) skewX(-20deg)}}
+html:not([data-fx="off"]) .main>*{animation:up .6s cubic-bezier(.2,.7,.2,1) both}
+html:not([data-fx="off"]) .main>*:nth-child(2){animation-delay:.07s}
+html:not([data-fx="off"]) .main>*:nth-child(3){animation-delay:.14s}
+html:not([data-fx="off"]) .main>*:nth-child(4){animation-delay:.21s}
+html:not([data-fx="off"]) h1{background:linear-gradient(90deg,var(--text),var(--violet),var(--pink),var(--text));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 7s linear infinite}
+html:not([data-fx="off"]) .logo{animation:pulse 3s ease-in-out infinite}
+html:not([data-fx="off"]) .hero .mock{animation:float 5s ease-in-out infinite}
+html:not([data-fx="off"]) .btn{position:relative;overflow:hidden}
+html:not([data-fx="off"]) .btn:not(.ghost):after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);pointer-events:none}
+html:not([data-fx="off"]) .btn:not(.ghost):hover:after{animation:sweep .7s ease}
+html:not([data-fx="off"]) .card,html:not([data-fx="off"]) .stat,html:not([data-fx="off"]) .nav button{transition:transform .2s,border-color .2s,box-shadow .2s,background .15s}
+html:not([data-fx="off"]) .card:hover,html:not([data-fx="off"]) .stat:hover{transform:translateY(-4px);border-color:var(--violet);box-shadow:0 18px 40px -22px var(--shadow)}
+html:not([data-fx="off"]) .nav button:hover{transform:translateX(4px)}
+@media(hover:none){.glow{display:none}}
+@media(max-width:900px){
+  .shell{grid-template-columns:1fr}
+  .side{position:static}
+  .nav{flex-direction:row;overflow-x:auto}
+  .navrow{flex:none}
+  .nav button{flex:none;min-width:230px}
+  .navrow button{flex:none}
+  .note{display:none}
+  .hero,.grid,  .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="glow" id="glow" aria-hidden="true"></div>
+<div class="shell">
+  <aside class="side">
+    <div class="brand"><div class="logo">E</div><div><b>ESCROTOS.COM</b><span>Central de downloads</span></div></div>
+    <div class="nav-label" id="navlbl">Escolha um programa</div>
+    <nav class="nav" role="tablist" aria-labelledby="navlbl" id="nav"></nav>
+    <div class="themes">
+      <div class="themes-top"><span>Tema</span><b id="themeName"></b></div>
+      <div class="swatches" id="swatches" role="group" aria-label="Escolher tema"></div>
+      <button class="fxbtn" id="fxbtn" role="switch" aria-checked="true"><span>Efeitos</span><i></i></button>
+    </div>
+    <div class="note"><b>Aviso do Windows:</b> como os programas não têm assinatura digital paga, o SmartScreen pode avisar na primeira abertura. Clique em "Mais informações" e depois em "Executar assim mesmo".</div>
+  </aside>
+  <main class="main" id="main" aria-live="polite"></main>
+</div>
+<footer class="foot">© ESCROTOS.COM. Todos os direitos reservados.<br>Feito por <b>rickzada</b></footer>
+
+<script>
+
+const APPS = [
+  {
+    id: "vpn",
+    short: "V",
+    name: "ESCROTOS VPN",
+    tagline: "VPN para o Discord",
+    headline: "O Discord pela VPN, o resto do PC no normal.",
+    lead: "Joga seu perfil WireGuard (.conf), clica em conectar e só o Discord passa pelo túnel. Jogo, navegador e download continuam na velocidade de sempre.",
+    url: "https://www.mediafire.com/file/pbh2sipyd4l6tsd/ESCROTOS-VPN.exe/file",
+    version: "1.0",
+    size: "51 MB",
+    platform: "Windows 10/11",
+    price: "Grátis",
+    video: "https://files.fm/f/atzn2hubvvgtfd63",
+    features: [
+      ["VPN só pro Discord", "Funciona com Discord normal, PTB, Canary e Development. Se quiser, passa o PC inteiro."],
+      ["Perfis .conf", "Adicione o arquivo do seu provedor (ex.: Proton VPN) e dê dois cliques pra conectar."],
+      ["Reconexão automática", "Se a conexão cair, ele levanta de novo sozinho."],
+      ["Inicia com o Windows", "Conecta no último perfil usado assim que o PC liga."],
+      ["Temas e fundo próprio", "Escuro, Claro, Blurple, Dracula, Neon e outros, com cor e imagem personalizáveis."]
+    ],
+    steps: ["Baixe um perfil <b>.conf</b> no seu provedor de VPN", "Abra o programa como administrador", "Clique em <b>Adicionar .conf</b>", "Dê dois cliques no perfil e abra o Discord"],
+    note: "Não inclui servidores de VPN: você usa o seu próprio perfil .conf.",
+    mock: {rows:[["Brasil-01","conectado"],["Portugal-02","WireGuard"],["Estados Unidos-03","WireGuard"]], btn:""}
+  },
+  {
+    id: "fgp",
+    short: "F",
+    name: "Fake Games Panel",
+    tagline: "Jogos falsos pro Discord",
+    headline: "Seu Discord jogando o que você quiser.",
+    lead: "Escolha os jogos, defina as horas e clique em iniciar. O painel abre processos leves com o nome dos jogos e o Discord passa a mostrar você jogando. Nenhum jogo é instalado ou aberto de verdade.",
+    url: "https://www.mediafire.com/file/4vovnmgbo17aryw/FakeGamesPanel.exe/file",
+    version: "V4",
+    size: "82 KB",
+    platform: "Windows 10/11",
+    price: "Grátis",
+    video: "",
+    features: [
+      ["Lista com cerca de 1.000 jogos", "Busca, filtro de jogos leves, filtro de favoritos e seleção em massa."],
+      ["Horas por jogo", "Defina quanto tempo cada jogo fica ativo, aceita decimal (ex.: 45.5)."],
+      ["Perfis pelo seu PC", "Detecta a RAM e recomenda a quantidade de jogos. Frio (8 GB), Normal (16 GB) e Rápido (32 GB)."],
+      ["Pula jogos com anti-cheat", "Opção para ignorar jogos que usam anti-cheat, e aviso se você abrir mais do que o PC aguenta."],
+      ["Três modos de execução", "Oculto fechando junto com o app, oculto continuando em segundo plano ou minimizado na barra."],
+      ["Sua própria lista", "Adicione jogos acrescentando uma linha no arquivo games.txt. Favoritos ficam salvos."],
+      ["Visual do seu jeito", "Temas Sangue, Brasa, Neon, Hacker, Matrix, Gelo e Ouro, com fundo próprio e janela transparente."]
+    ],
+    steps: ["Abra o <b>FakeGamesPanel.exe</b> (não precisa de administrador)", "Veja a RAM detectada e a quantidade recomendada, e escolha o <b>perfil</b> (Frio, Normal ou Rápido)", "Marque os jogos na lista (use a busca, <b>Só leves</b>, <b>Só favoritos</b> ou <b>Marcar visíveis</b>) ou use <b>INICIAR PRIMEIROS N</b>", "Defina as <b>horas por jogo</b> e o <b>modo de execução</b>", "Clique em <b>INICIAR MARCADOS</b>: a barra de status mostra <b>ONLINE</b>, os jogos ativos e a RAM usada", "Para encerrar, use <b>PARAR TUDO E LIMPAR</b>"],
+    specs: [
+      ["Versão", "V4 · 82 KB · executável único, sem instalador"],
+      ["Sistema", "Windows 10/11"],
+      ["Lista de jogos", "1.000 jogos (645 normais e 355 leves), editável no games.txt no formato TIPO|id|nome|executável"],
+      ["Perfil Frio", "PC com 8 GB: 4 jogos por vez, pausa de 2 s, 2 threads"],
+      ["Perfil Normal", "PC com 16 GB: 8 jogos por vez, pausa de 1 s, 4 threads"],
+      ["Perfil Rápido", "PC com 32 GB: 20 jogos por vez, pausa de 1 s, todas as threads"],
+      ["Horas por jogo", "Aceita decimal, por exemplo 24 ou 45.5"],
+      ["Modos de execução", "Oculto fechando junto com o app (recomendado), oculto continuando em segundo plano ou minimizado na barra de tarefas"],
+      ["Filtros e seleção", "Busca, Só leves, Só favoritos, Marcar visíveis, Desmarcar tudo e Favoritar (tecla F)"],
+      ["Proteções", "Pula jogos com anti-cheat (opcional) e pede confirmação se você abrir mais jogos do que o recomendado para a sua RAM"],
+      ["Arquivos salvos", "settings.txt (configurações), favorites.txt (favoritos) e games.txt (lista de jogos)"],
+      ["Visual", "7 temas (Sangue, Brasa, Neon, Hacker, Matrix, Gelo e Ouro), fundo com imagem ou cor, escurecer o fundo e transparência da janela"]
+    ],
+    note: "Ele só simula o status de jogo no Discord. Abrir muitos jogos de uma vez usa memória, então siga a quantidade recomendada pelo painel.",
+    mock: {rows:[["Valorant","leve"],["Rocket League","normal"],["Elden Ring","normal"]], btn:"INICIAR MARCADOS"}
+  }
+];
+
+const THEMES = [
+  {id:"violeta", name:"Violeta", c:["#8b5cf6","#ff5d8f"]},
+  {id:"sangue",  name:"Sangue",  c:["#dc2626","#ff5d5d"]},
+  {id:"brasa",   name:"Brasa",   c:["#f97316","#fbbf24"]},
+  {id:"neon",    name:"Neon",    c:["#00e5ff","#ff2bd6"]},
+  {id:"hacker",  name:"Hacker",  c:["#22c55e","#84cc16"]},
+  {id:"gelo",    name:"Gelo",    c:["#38bdf8","#a5f3fc"]},
+  {id:"ouro",    name:"Ouro",    c:["#eab308","#f59e0b"]},
+  {id:"pretogelo", name:"Preto e Gelo", c:["#000000","#e8f1f5"]},
+  {id:"claro",   name:"Claro",   c:["#f4f2ff","#7c3aed"]}
+];
+
+const nav = document.getElementById("nav"), main = document.getElementById("main");
+const valid = id => APPS.some(a => a.id === id);
+let current = valid(location.hash.slice(1)) ? location.hash.slice(1) : APPS[0].id;
+
+const cv = document.getElementById("fx"), cx = cv.getContext("2d"), glow = document.getElementById("glow");
+let W = 0, H = 0, P = [], raf = 0, rgb = "139,92,246";
+function fxColor(){
+  let h = getComputedStyle(document.documentElement).getPropertyValue("--violet").trim().replace("#","");
+  if(h.length === 3) h = h.split("").map(c => c + c).join("");
+  if(h.length === 6) rgb = [0,2,4].map(i => parseInt(h.substr(i,2),16)).join(",");
+}
+function fxSize(){
+  const d = window.devicePixelRatio || 1;
+  W = innerWidth; H = innerHeight;
+  cv.width = W * d; cv.height = H * d;
+  cx.setTransform(d,0,0,d,0,0);
+  const n = Math.min(70, Math.round(W * H / 22000));
+  P = Array.from({length:n}, () => ({x:Math.random()*W, y:Math.random()*H, vx:(Math.random()-.5)*.35, vy:(Math.random()-.5)*.35, r:Math.random()*1.6+.6}));
+}
+function fxFrame(){
+  cx.clearRect(0,0,W,H);
+  for(const p of P){
+    p.x += p.vx; p.y += p.vy;
+    if(p.x < 0 || p.x > W) p.vx *= -1;
+    if(p.y < 0 || p.y > H) p.vy *= -1;
+  }
+  for(let i = 0; i < P.length; i++){
+    const a = P[i];
+    cx.fillStyle = `rgba(${rgb},.55)`;
+    cx.beginPath(); cx.arc(a.x, a.y, a.r, 0, 6.2832); cx.fill();
+    for(let j = i + 1; j < P.length; j++){
+      const b = P[j], dx = a.x - b.x, dy = a.y - b.y, d = Math.sqrt(dx*dx + dy*dy);
+      if(d < 130){
+        cx.strokeStyle = `rgba(${rgb},${(1 - d/130) * .2})`;
+        cx.beginPath(); cx.moveTo(a.x, a.y); cx.lineTo(b.x, b.y); cx.stroke();
+      }
+    }
+  }
+  raf = requestAnimationFrame(fxFrame);
+}
+const fxOn = () => document.documentElement.dataset.fx !== "off";
+function fxStart(){ if(!raf && fxOn() && !document.hidden){ fxSize(); raf = requestAnimationFrame(fxFrame); } }
+function fxStop(){ cancelAnimationFrame(raf); raf = 0; cx.clearRect(0,0,W,H); }
+function setFx(on, save){
+  document.documentElement.dataset.fx = on ? "on" : "off";
+  document.getElementById("fxbtn").setAttribute("aria-checked", on);
+  if(on) fxStart(); else fxStop();
+  if(save){ try{ localStorage.setItem("escrotos-fx", on ? "on" : "off"); }catch(e){} }
+}
+document.getElementById("fxbtn").onclick = () => setFx(!fxOn(), true);
+document.addEventListener("visibilitychange", () => document.hidden ? fxStop() : fxStart());
+addEventListener("resize", () => { if(raf) fxSize(); });
+addEventListener("mousemove", e => {
+  if(!fxOn()) return;
+  glow.classList.add("on");
+  glow.style.transform = `translate(${e.clientX}px,${e.clientY}px)`;
+});
+document.addEventListener("mouseleave", () => glow.classList.remove("on"));
+
+function savedTheme(){
+  let t = null;
+  try{ t = localStorage.getItem("escrotos-tema"); }catch(e){}
+  return THEMES.some(x => x.id === t) ? t : THEMES[0].id;
+}
+function setTheme(id, save){
+  const th = THEMES.find(x => x.id === id) || THEMES[0];
+  document.documentElement.dataset.theme = th.id;
+  document.getElementById("themeName").textContent = th.name;
+  document.querySelectorAll(".sw").forEach(b => b.setAttribute("aria-pressed", b.dataset.id === th.id));
+  fxColor();
+  if(save){ try{ localStorage.setItem("escrotos-tema", th.id); }catch(e){} }
+}
+function renderThemes(){
+  document.getElementById("swatches").innerHTML = THEMES.map(t =>
+    `<button class="sw" data-id="${t.id}" aria-pressed="false" aria-label="Tema ${t.name}" title="${t.name}" style="background:linear-gradient(135deg,${t.c[0]} 50%,${t.c[1]} 50%)"></button>`
+  ).join("");
+  document.querySelectorAll(".sw").forEach(b => b.onclick = () => setTheme(b.dataset.id, true));
+  setTheme(savedTheme(), false);
+}
+
+function renderNav(){
+  const dl = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>';
+  nav.innerHTML = APPS.map(a => {
+    const ok = a.url && a.url !== "#";
+    return `<div class="navrow" role="presentation">
+    <button role="tab" data-id="${a.id}" aria-selected="${a.id===current}">
+      <span class="ico">${a.short}</span>
+      <span><strong>${a.name}</strong><small>${a.tagline}</small></span>
+    </button>
+    <a class="navdl" href="${a.url}" ${ok?'download target="_blank" rel="noopener"':'aria-disabled="true"'} aria-label="Baixar ${a.name}" title="Baixar ${a.name}">${dl}</a>
+    </div>`;
+  }).join("");
+  nav.querySelectorAll("button").forEach(b => b.onclick = () => select(b.dataset.id));
+}
+
+function mockHtml(a){
+  if(!a.mock) return `<div class="mock empty">Coloque aqui um print do ${a.name}</div>`;
+  const rows = a.mock.rows.map((r,i)=>`<div class="mrow${i===0?" on":""}"><span>${r[0]}</span><span>${r[1]}</span></div>`).join("");
+  return `<div class="mock"><div class="bar"><i></i><i></i><i></i></div>${rows}${a.mock.btn?`<div class="mbtn">${a.mock.btn}</div>`:`<div style="height:6px"></div>`}</div>`;
+}
+
+function fgHero(f,ready){
+  return `<section class="hero" id="baixar-fake-games">
+      <div>
+        <span class="tag"><i></i>Versão ${f.version}</span>
+        <h1>${f.headline}</h1>
+        <p class="lead">${f.lead}</p>
+        <div class="cta">
+          <a class="btn" href="${f.url}" ${ready?"download":'aria-disabled="true"'}>Baixar para Windows</a>
+          <a class="btn ghost" href="#fgp" onclick="select('fgp');window.scrollTo({top:0,behavior:'smooth'});return false">Como usar</a>
+        </div>
+      </div>
+      ${mockHtml(f)}
+    </section>`;
+}
+
+function render(){
+  const a = APPS.find(x => x.id === current);
+  const ready = a.url && a.url !== "#";
+  const fg = APPS.find(x => x.id === "fgp"), fgReady = fg.url && fg.url !== "#";
+  const vid = a.video ? `<a class="btn ghost" href="${a.video}" target="_blank" rel="noopener">Ver vídeo de instalação</a>` : "";
+  main.innerHTML = `
+    ${current!=="fgp" ? fgHero(fg,fgReady) : ""}
+    <section class="hero">
+      <div>
+        <span class="tag"><i></i>Versão ${a.version}</span>
+        <h1>${a.headline}</h1>
+        <p class="lead">${a.lead}</p>
+        <div class="cta">
+          <a class="btn" href="${a.url}" ${ready?"download":'aria-disabled="true"'}>Baixar para Windows</a>
+          ${vid}
+          <a class="btn ghost" href="#como-usar" onclick="document.getElementById('como-usar').scrollIntoView({behavior:'smooth'});return false">Como usar</a>
+        </div>
+      </div>
+      ${mockHtml(a)}
+    </section>
+    <section class="stats">
+      <div class="stat"><span>Plataforma</span><b>${a.platform}</b></div>
+      <div class="stat"><span>Tamanho</span><b>${a.size}</b></div>
+      <div class="stat"><span>Versão</span><b>${a.version}</b></div>
+      <div class="stat"><span>Preço</span><b>${a.price}</b></div>
+    </section>
+    <section class="grid">
+      <div class="card"><h2>O que ele faz</h2>
+        <ul class="feat">${a.features.map(f=>`<li><span><b>${f[0]}.</b> ${f[1]}</span></li>`).join("")}</ul>
+      </div>
+      <div class="card" id="como-usar"><h2>Como usar</h2>
+        <ol class="steps">${a.steps.map(s=>`<li>${s}</li>`).join("")}</ol>
+        ${a.specs?`<h2 style="margin-top:22px">Especificações</h2><dl class="specs">${a.specs.map(x=>`<div><dt>${x[0]}</dt><dd>${x[1]}</dd></div>`).join("")}</dl>`:""}
+        ${a.video?`<p style="margin-top:16px"><a href="${a.video}" target="_blank" rel="noopener" style="color:var(--pink);font-weight:700">Assistir o vídeo passo a passo</a></p>`:""}
+        ${a.note?`<p style="margin-top:16px;font-size:14px;color:var(--muted)">${a.note}</p>`:""}
+      </div>
+    </section>`;
+}
+
+function select(id){
+  current = id; history.replaceState(null,"","#"+id);
+  renderNav(); render();
+}
+renderThemes(); renderNav(); render(); setFx(fxOn(), false);
+</script>
+</body>
+</html>
