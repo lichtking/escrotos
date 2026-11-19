@@ -117,6 +117,10 @@ dl.specs{display:grid;gap:10px;margin-top:6px}
 dl.specs div{display:grid;gap:2px;padding-top:10px;border-top:1px solid var(--line)}
 dl.specs dt{font-weight:700;font-size:14px;color:var(--text)}
 dl.specs dd{margin:0;font-size:14px;color:var(--muted)}
+.card.warn{border-color:color-mix(in srgb,var(--pink) 45%,var(--line))}
+.card.warn h2{color:var(--pink)}
+.about p{color:var(--muted);margin-bottom:12px}
+.about p:last-child{margin-bottom:0}
 .foot{color:var(--muted);font-size:13px;text-align:center;padding:10px 22px 40px;border-top:1px solid var(--line);max-width:1180px;margin:0 auto}
 .foot b{color:var(--text)}
 
@@ -249,6 +253,42 @@ const APPS = [
     ],
     note: "Ele só simula o status de jogo no Discord. Abrir muitos jogos de uma vez usa memória, então siga a quantidade recomendada pelo painel.",
     mock: {rows:[["Valorant","leve"],["Rocket League","normal"],["Elden Ring","normal"]], btn:"INICIAR MARCADOS"}
+  },
+  {
+    id: "orbs",
+    nopromo: true,
+    short: "O",
+    name: "script de orbs",
+    tagline: "Automação de Quests do Discord",
+    headline: "Suas Quests do Discord, sem fazer tudo na mão.",
+    lead: "Escolha o que entra, defina a ordem e acompanhe tudo pelo console. O script cuida das missões abertas enquanto você faz outra coisa, sem instalação pesada.",
+    url: "https://www.mediafire.com/file/jnpxw892dwlo781/script_orbs.txt/file",
+    version: "1.0",
+    size: "Pequeno",
+    platform: "Windows 10/11",
+    price: "Grátis",
+    video: "",
+    features: [
+      ["Filtros personalizados", "Escolha os tipos de missão, bloqueie os formatos que não quer fazer e busque ou exclua campanhas pelo nome."],
+      ["Filtro por recompensa", "Faça só as missões que dão a recompensa do seu interesse."],
+      ["Ordem do seu jeito", "Comece pelas mais rápidas, pelas mais longas ou priorize um formato específico."],
+      ["Execução simultânea", "As missões selecionadas avançam juntas, sem esperar uma terminar para começar a outra."],
+      ["Acompanhamento no console", "Veja o que foi concluído, o que está em andamento e por que uma missão ficou de fora da lista."],
+      ["Leve e sem instalador", "Arquivo pequeno, sem instalação pesada e sem configuração complicada."]
+    ],
+    steps: ["Baixe o arquivo <b>script_orbs.txt</b>", "Defina seus <b>filtros</b>: tipos de missão, nomes e recompensas", "Escolha a <b>ordem de prioridade</b> das missões", "Execute e acompanhe o progresso pelo <b>console</b>"],
+    about: [
+      "Conforme o Discord foi lançando mais campanhas e Quests, com formatos e recompensas diferentes, acompanhar tudo na mão ficou cansativo. Entre prazos, requisitos e tempo de espera de cada missão, é fácil esquecer alguma ou perder o timing.",
+      "O script de orbs centraliza esse processo: você define as regras uma vez e ele aplica em todas as missões abertas, sem tudo ou nada. Você decide o que entra, o que fica de fora e em qual ordem, e o console mostra cada passo, inclusive o motivo de uma missão não ter entrado."
+    ],
+    risks: [
+      ["Risco para a conta", "Automatizar Quests pode ir contra os Termos de Serviço do Discord. Isso pode gerar aviso, perda de recompensas ou até suspensão da conta."],
+      ["Sem garantia de recompensa", "O Discord pode não contabilizar uma missão feita por automação, ou invalidar a recompensa depois."],
+      ["Pode parar de funcionar", "Qualquer mudança no Discord pode quebrar o script ou mudar o resultado, sem aviso."],
+      ["Aviso do Windows ou antivírus", "Por ser um script sem assinatura digital, o SmartScreen ou o antivírus pode alertar na primeira execução."]
+    ],
+    note: "Use com bom senso e por sua conta e risco. Se não quiser arriscar sua conta principal, não use nela.",
+    mock: {rows:[["Missão de vídeo","concluída"],["Missão de jogo","em andamento"],["Missão filtrada","ignorada"]], btn:"INICIAR"}
   }
 ];
 
@@ -386,7 +426,7 @@ function render(){
   const fg = APPS.find(x => x.id === "fgp"), fgReady = fg.url && fg.url !== "#";
   const vid = a.video ? `<a class="btn ghost" href="${a.video}" target="_blank" rel="noopener">Ver vídeo de instalação</a>` : "";
   main.innerHTML = `
-    ${current!=="fgp" ? fgHero(fg,fgReady) : ""}
+    ${current!=="fgp" && !a.nopromo ? fgHero(fg,fgReady) : ""}
     <section class="hero">
       <div>
         <span class="tag"><i></i>Versão ${a.version}</span>
@@ -395,6 +435,7 @@ function render(){
         <div class="cta">
           <a class="btn" href="${a.url}" ${ready?"download":'aria-disabled="true"'}>Baixar para Windows</a>
           ${vid}
+          ${a.about?`<a class="btn ghost" href="#descricao" onclick="document.getElementById('descricao').scrollIntoView({behavior:'smooth'});return false">Descrição</a>`:""}
           <a class="btn ghost" href="#como-usar" onclick="document.getElementById('como-usar').scrollIntoView({behavior:'smooth'});return false">Como usar</a>
         </div>
       </div>
@@ -416,7 +457,13 @@ function render(){
         ${a.video?`<p style="margin-top:16px"><a href="${a.video}" target="_blank" rel="noopener" style="color:var(--pink);font-weight:700">Assistir o vídeo passo a passo</a></p>`:""}
         ${a.note?`<p style="margin-top:16px;font-size:14px;color:var(--muted)">${a.note}</p>`:""}
       </div>
-    </section>`;
+    </section>
+    ${a.about?`<section class="grid" id="descricao">
+      <div class="card about"><h2>Descrição</h2>${a.about.map(p=>`<p>${p}</p>`).join("")}</div>
+      <div class="card warn"><h2>O que pode causar</h2>
+        <ul class="feat">${(a.risks||[]).map(r=>`<li><span><b>${r[0]}.</b> ${r[1]}</span></li>`).join("")}</ul>
+      </div>
+    </section>`:""}`;
 }
 
 function select(id){
